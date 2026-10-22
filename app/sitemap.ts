@@ -1,0 +1,2 @@
+import type {MetadataRoute} from 'next';import {getPosts} from '@/lib/posts';import {siteUrl} from '@/lib/config';
+export const dynamic='force-dynamic';export default async function sitemap():Promise<MetadataRoute.Sitemap>{const posts=await getPosts();return [{url:siteUrl,changeFrequency:'daily',priority:1},{url:`${siteUrl}/contact`,changeFrequency:'monthly',priority:.5},...posts.map(p=>({url:`${siteUrl}/articles/${p.slug}`,lastModified:new Date(`${p.date}T12:00:00Z`),changeFrequency:'weekly' as const,priority:.8}))]}

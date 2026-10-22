@@ -1,0 +1,3 @@
+import {blog} from '@/lib/config';import {ContactForm} from '@/components/contact-form';import type {Metadata} from 'next';
+export const metadata:Metadata={title:'Contact',description:`Get in touch with the team behind ${blog.name}.`,alternates:{canonical:'/contact'}};
+export default function Contact(){return <main className="wrap contact-layout"><div><span className="section-kicker">SAY HELLO / 01</span><h1>Every good story starts with a conversation<span className="point">.</span></h1><p>Have a question, an idea, or a collaboration in mind? Drop us a note. We read every message.</p><div className="contact-note">GENERAL INQUIRIES <a href={`mailto:${blog.contactEmail}`}>{blog.contactEmail}</a></div></div><ContactForm/></main>}

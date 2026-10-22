@@ -1,0 +1,1 @@
+import {AdminLogin} from '@/components/admin-login';import type {Metadata} from 'next';export const metadata:Metadata={title:'Admin sign in',robots:{index:false,follow:false}};export default function Login(){return <main className="auth-page"><AdminLogin/></main>}

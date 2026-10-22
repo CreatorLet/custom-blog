@@ -1,0 +1,51 @@
+{
+  "name": "THE SUNDAY EDIT",
+  "tagline": "Ideas for a more considered life.",
+  "description": "An independent journal on design, culture, technology and the art of living well.",
+  "siteUrl": "http://localhost:3000",
+  "logoText": "SUNDAY.",
+  "logoImage": "",
+  "favicon": "",
+  "accent": "#af613e",
+  "contactEmail": "hello@example.com",
+  "heroTitle": "Curiosity looks good on you.",
+  "heroSubtitle": "A journal of ideas, people and places worth paying attention to.",
+  "heroImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1800&q=85",
+  "navigation": [
+    {
+      "label": "Journal",
+      "href": "/"
+    },
+    {
+      "label": "Culture",
+      "href": "/category/culture"
+    },
+    {
+      "label": "Design",
+      "href": "/category/design"
+    },
+    {
+      "label": "Technology",
+      "href": "/category/technology"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "socialLinks": {
+    "instagram": "",
+    "x": ""
+  },
+  "footerNote": "Independent stories. Fresh perspectives.",
+  "showSponsoredPosts": true,
+  "relatedArticles": true,
+  "postsPerPage": 12,
+  "hosting": {
+    "enabled": false,
+    "activationDate": null,
+    "price": 0,
+    "currency": "NGN",
+    "durationDays": 31
+  }
+}

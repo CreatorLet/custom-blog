@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <main className="wrap not-found"><span className="section-kicker">404 / NOT FOUND</span><h1>This story wandered off.</h1><p>The page you requested could not be found.</p><Link className="dark-button" href="/">Return to journal ↗</Link></main>}

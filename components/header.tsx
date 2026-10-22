@@ -1,0 +1,2 @@
+import Link from 'next/link';import {Search,ArrowUpRight} from 'lucide-react';import {Brand} from './brand';import {blog} from '@/lib/config';
+export function Header(){return <><div className="topline">INDEPENDENT JOURNAL <span>THOUGHTFUL STORIES, EVERY WEEK</span></div><header className="header wrap"><Brand/><nav aria-label="Main navigation">{blog.navigation.map(x=><Link key={x.href} href={x.href}>{x.label}</Link>)}</nav><Link href="/contact" className="nav-cta">Get in touch <ArrowUpRight size={14}/></Link></header></>}

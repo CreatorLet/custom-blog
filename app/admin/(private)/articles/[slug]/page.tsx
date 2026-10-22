@@ -1,0 +1,1 @@
+import {notFound} from 'next/navigation';import {getPost} from '@/lib/posts';import {ArticleEditor} from '@/components/article-editor';export default async function Edit({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=await getPost(slug);if(!p)notFound();return <ArticleEditor initial={p}/>}
