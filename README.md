@@ -53,8 +53,9 @@ No platform can guarantee rankings or citations in Google or AI assistants. Page
 
 Create one **private repository** per creator from this source, modify only `blog.config.json`, then provision a dedicated deployment with separate server-only environment secrets and a custom domain. Creators use `/admin` but never need access to GitHub. Keep the owner-controlled GitHub credentials outside the repository.
 
-## Deploy to Render
-
-This repo contains a Render Blueprint (`render.yaml`). In Render, choose **New → Blueprint** and connect this GitHub repository. Supply `ADMIN_PASSWORD` and `GITHUB_TOKEN` as private environment variables. Render generates `SESSION_SECRET`. Set `GITHUB_TOKEN` to a fine-grained token with Contents read/write on **this specific repository**. Make the repository **private** before accepting contact submissions because messages are saved inside `data/messages/`.
-
-This Next.js application must run as a Render **Web Service**, not a Static Site: article editing and contact submission require server-side route handlers. Render's disk is ephemeral, so configure GitHub storage before publishing; do not rely on local writes in production. Set the production URL in `blog.config.json` to the actual Render/custom domain and redeploy for correct canonical metadata.
+## Premium editor, image uploads and search optimisation
+- The visual Tiptap editor stores Markdown in GitHub while editing directly as formatted text. It supports inline image uploads (PNG/JPEG/WebP/GIF, 4MB limit). Uploaded files are stored in `media/` and served through `/api/media/[name]`. Configure the GitHub token for production; Render's ephemeral filesystem is not used for media.
+- Set `siteUrl` in `blog.config.json` or `NEXT_PUBLIC_SITE_URL` to your actual canonical HTTPS domain. Set up both root and www domains in Render; Render provides an automatic redirect to the preferred hostname.
+- `socialSharing` in the config controls article sharing links. `seo.defaultTitle` and `seo.homepageIntro` customize searchable editorial content; write genuinely useful original content, not keyword stuffing.
+- Public article and homepage rendering is revalidated every 120 seconds to reduce GitHub API round trips. First visits after cache expiry can still be slower. Render Free services may spin down and cause cold starts. An always-on paid instance is advisable for consistent response times.
+- Before launch, change the GitHub repository visibility to private because contact messages are stored there.
