@@ -8,7 +8,7 @@ const useGithub = Boolean(owner && repo && token);
 function validate(p: string) { if (!/^(content\/posts|data\/messages)\/[a-z0-9-]+\.(md|json)$/.test(p)) throw Error('Invalid content path'); return p; }
 async function githubRequest(p: string, init?: RequestInit) {
  const u = `https://api.github.com/repos/${owner}/${repo}/contents/${p}`;
- return fetch(u, { ...init, headers: { Accept:'application/vnd.github+json', Authorization:`Bearer ${token}`, 'X-GitHub-Api-Version':'2022-11-28', ...(init?.headers||{}) }, cache:'no-store' });
+ return fetch(u, { ...init, headers: { Accept:'application/vnd.github+json', Authorization:`Bearer ${token}`, 'X-GitHub-Api-Version':'2022-11-28', ...(init?.headers||{}) }, next:{revalidate:init?.method?0:120} });
 }
 export async function listFiles(dir: 'content/posts'|'data/messages') {
  if (useGithub) { const res=await githubRequest(`${dir}?ref=${encodeURIComponent(branch)}`); if(res.status===404) return []; if(!res.ok) throw Error('Cannot read repository'); const items=await res.json(); return (Array.isArray(items)?items:[]).filter((v:{type:string,name:string})=>v.type==='file' && /\.(md|json)$/.test(v.name)).map((v:{name:string})=>v.name); }
