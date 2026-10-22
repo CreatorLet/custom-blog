@@ -1,16 +1,16 @@
 {
-  "name": "THE SUNDAY EDIT",
-  "tagline": "Ideas for a more considered life.",
-  "description": "An independent journal on design, culture, technology and the art of living well.",
+  "name": "THE GOOD LIFE JOURNAL",
+  "tagline": "Live beautifully. Think differently.",
+  "description": "Discover considered living, creative inspiration, meaningful culture and fresh perspectives. Explore practical stories, design ideas and everyday rituals for a richer life.",
   "siteUrl": "http://localhost:3000",
-  "logoText": "SUNDAY.",
+  "logoText": "THE GOOD LIFE.",
   "logoImage": "",
-  "favicon": "",
-  "accent": "#af613e",
+  "favicon": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=96&h=96&fit=crop&crop=center",
+  "accent": "#ae5f44",
   "contactEmail": "hello@example.com",
-  "heroTitle": "Curiosity looks good on you.",
-  "heroSubtitle": "A journal of ideas, people and places worth paying attention to.",
-  "heroImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1800&q=85",
+  "heroTitle": "A little inspiration changes everything.",
+  "heroSubtitle": "Beautiful ideas for a life that feels more your own. Explore the people, places and perspectives inspiring better everyday living.",
+  "heroImage": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=82",
   "navigation": [
     {
       "label": "Journal",
@@ -47,5 +47,22 @@
     "price": 0,
     "currency": "NGN",
     "durationDays": 31
+  },
+  "socialSharing": {
+    "enabled": true,
+    "platforms": [
+      "x",
+      "facebook",
+      "linkedin",
+      "pinterest",
+      "whatsapp"
+    ],
+    "copyLink": true
+  },
+  "seo": {
+    "defaultTitle": "The Good Life Journal | Design, Culture & Inspired Living",
+    "homepageIntro": "Welcome to The Good Life Journal, an independent destination for design, culture, technology, meaningful rituals and the people shaping how we live. We publish thoughtful guides, compelling interviews and inspiring stories created for curious readers who want practical ideas as well as fresh perspectives.",
+    "canonicalHost": "",
+    "robotsIndex": true
   }
 }
