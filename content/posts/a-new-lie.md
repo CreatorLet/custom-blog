@@ -11,18 +11,20 @@ sponsored: false
 sponsor: ''
 status: published
 ---
-
 ## The story they told him
+
 I **told** them how to *behave* but they realize the lie
 
 How do you [behave](https://siteamplify.com) 
+
 > then
 
 - 
 
-- ruur
+![InnocentMe.jpeg](/api/media/df8aedaf-4ec1-4cd6-a3c6-342dab33750e.jpg)
 
+- ruur
 - 
 - bris
-
 - hngks
+
