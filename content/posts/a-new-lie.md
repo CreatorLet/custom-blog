@@ -13,7 +13,7 @@ status: published
 ---
 
 ## The story they told him
-I **told** them how to *behave *but they realize the lie
+I **told** them how to *behave* but they realize the lie
 
 How do you [behave](https://siteamplify.com) 
 > then
