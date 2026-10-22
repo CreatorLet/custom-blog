@@ -9,7 +9,7 @@ image: 'https://siteamplify.com/amplify.png'
 imageAlt: ''
 sponsored: false
 sponsor: ''
-status: draft
+status: published
 ---
 
 ## The story they told him
